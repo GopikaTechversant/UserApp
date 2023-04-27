@@ -9,14 +9,18 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
+// import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+// import { DatePipe } from '@angular/common';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -28,10 +32,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatIconModule,
+    // MatIconModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // DatePipe
   ],
   providers: [],
   bootstrap: [AppComponent]
