@@ -1,0 +1,41 @@
+<!-- <mat-form-field>
+  <input matInput placeholder="Username" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Email" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+</mat-form-field>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close >Cancel</button>
+  <button mat-button color="primary" (click)="saveChanges()">Save</button>
+</mat-dialog-actions> -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <div class="card">
+       
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="username" class="form-control" id="username" name="username" [formControl]="username" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" [formControl]="email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password"  name="password" [formControl]="password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary"(click)="saveChanges()">save</button>
+            <button mat-button mat-dialog-close >Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
