@@ -11,11 +11,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { DeleteComponent } from './components/delete/delete.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SignupTimePipe } from 'src/app/pipes/signup-time.pipe';
 @NgModule({
   declarations: [
     UserlistComponent,
     EditComponent,
-    DeleteComponent
+    DeleteComponent,
+    SignupTimePipe
   ],
   imports: [
     CommonModule,
