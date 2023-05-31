@@ -1,0 +1,32 @@
+<!-- 
+<div class="productList">
+    <ng-container *ngFor="let item of data">
+      <h2>{{ item.date | date:'mediumDate' }}({{item.data.length}})</h2>
+    
+        <div class="products" *ngFor="let data of item.data">
+          <div class="product">
+          <p class="srno">{{ data.serviceRequestNumber }}</p>
+          <p>{{data.companyName}}</p>
+          
+            <p>Sch:{{data.scheduledDate | date:'mediumDate'}} Rcd:{{data.updatedAt | date:'mediumDate'}}</p>
+            <p>Rcd:{{data.updatedAt | date:'mediumDate'}}</p>
+           
+         </div><br>
+      </div>
+    </ng-container>
+  </div> -->
+  <div class="productList">
+  <ng-container *ngFor="let item of itemsByDate">
+    <h2>{{ item.date | date }} ({{ item.data.length }})</h2> <!-- Format and display the date -->
+ 
+    <ul>
+      <li *ngFor="let product of item.data">
+        
+        <p>{{ product.serviceRequestNumber }}</p>
+        <p>Sch:{{product.scheduledDate | date:'mediumDate'}} Rcd:{{product.updatedAt | date:'mediumDate'}}</p>
+       
+      </li>
+    </ul>
+ 
+</ng-container>
+</div>

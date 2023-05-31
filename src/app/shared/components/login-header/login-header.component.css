@@ -1,0 +1,22 @@
+.logoHeader{
+   
+    background-color: #8d5dfd;
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 60px;
+
+    
+}
+.my-5 {
+   margin-top: -20rem!important;
+    /* margin-bottom: 3rem!important; */
+    margin-left: -550px;
+    width: 1600px;
+    margin-right: -806px;
+}
+
+h1{
+    color: white;
+    font-weight: 500;
+    padding-top: 9px;
+}

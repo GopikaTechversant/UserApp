@@ -7,14 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit{
-  user:User={id:0,username:'',email:'',role:'',password:'',signupTime:new Date()};
+  user:User={id:0,username:'',email:'',role:'',password:'',time:''};
   usersData:User[]=[];
+ 
+  
   constructor(private router:Router){}
   ngOnInit(): void {
       const userData = localStorage.getItem('users') ;
       if(userData){
         this.usersData = JSON.parse(userData);
       }
+      
   }
   signup():void{
     console.log(this.usersData)
@@ -24,12 +27,12 @@ export class SignupComponent implements OnInit{
       return;
     }
     this.user.id = this.usersData.length+1;
-    this.user.signupTime = new Date().toDateString;
+    this.user.time = new Date().toString();
     this.usersData.push(this.user);
     localStorage.setItem('users',JSON.stringify(this.usersData) );
-    
     alert("User created successfully");
     this.router.navigate(['']);
   }
-
+  // dateTime = new Date().toLocaleString()
+  
 }

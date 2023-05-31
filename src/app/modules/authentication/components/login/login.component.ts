@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
 import { Router } from '@angular/router';
+import { IonInput } from '@ionic/angular';
+// import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
+ 
+
   email:string='';
   password:string='';
   usersData: User[] = [];
+  showPass:Boolean=false;
   constructor(private router:Router){}
   ngOnInit(): void {
     const userData = localStorage.getItem('users');

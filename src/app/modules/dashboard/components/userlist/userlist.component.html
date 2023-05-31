@@ -6,20 +6,15 @@
       <th>Username</th>
       <th>Email</th>
       <th>Role</th>
-<<<<<<< HEAD
       <th *ngIf="isAdmin()">Action 1</th>
-=======
-      <th>time</th>
-      <th *ngIf="isAdmin()">Action</th>
->>>>>>> parent of c24924b... added filter
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users">
+    <tr *ngFor="let user of users" appHighlight>
       <td>{{user.username}}</td>
       <td>{{user.email}}</td>
       <td>{{user.role}}</td>
-     <td>{{user.signupTime | signupTime}}</td>
+      <td>{{user.time | signUpDate}}</td>
       <td *ngIf="isAdmin()">
         <button class="btn btn-primary" (click)="openEditDialog(user)">
           edit
@@ -30,4 +25,3 @@
     </tr>
   </tbody>
 </table>
-<!-- <button (click)="logout()" class="btn btn-secondary">Logout</button> -->
