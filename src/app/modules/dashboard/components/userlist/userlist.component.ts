@@ -9,7 +9,8 @@ import { EditComponent } from '../edit/edit.component';
 @Component({
   selector: 'app-userlist',
   templateUrl: './userlist.component.html',
-  styleUrls: ['./userlist.component.css']
+  styleUrls: ['./userlist.component.css'],
+ 
 })
 export class UserlistComponent implements OnInit {
   users: User[] = [];

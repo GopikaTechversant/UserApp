@@ -4,5 +4,5 @@ export interface User {
     email:string;
     role:string;
     password:string;
-    signupTime: Date;
+    time: string;
 }

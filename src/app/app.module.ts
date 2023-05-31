@@ -13,11 +13,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { IonicModule } from '@ionic/angular';
+import { MatInputModule } from '@angular/material/input';
+import { HighlightDirective } from './directives/highlight.directive';
+import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SortProductComponent } from './sort-product/sort-product.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ProductsComponent,
+    SortProductComponent,
+    
+    
    
   ],
   imports: [
@@ -33,8 +42,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatInputModule ,
+    HttpClientModule,
+    IonicModule.forRoot(),
+    
   ],
+  exports: [MatAutocompleteModule],
   providers: [],
   bootstrap: [AppComponent]
 })
