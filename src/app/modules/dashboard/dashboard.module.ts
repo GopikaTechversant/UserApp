@@ -11,15 +11,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { DeleteComponent } from './components/delete/delete.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SignUpDatePipe } from 'src/app/pipes/sign-up-date.pipe';
-import { HighlightDirective } from 'src/app/directives/highlight.directive';
+import { SignupTimePipe } from 'src/app/pipes/signup-time.pipe';
 @NgModule({
   declarations: [
     UserlistComponent,
     EditComponent,
     DeleteComponent,
-    SignUpDatePipe,
-    HighlightDirective
+    SignupTimePipe
   ],
   imports: [
     CommonModule,
@@ -31,10 +29,6 @@ import { HighlightDirective } from 'src/app/directives/highlight.directive';
     MatIconModule,
     SharedModule,
     ReactiveFormsModule
-  ],
-  exports: [
-    UserlistComponent,
-    HighlightDirective
   ]
 })
 export class DashboardModule { }
