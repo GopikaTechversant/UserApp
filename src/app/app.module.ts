@@ -20,11 +20,15 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SortProductComponent } from './sort-product/sort-product.component';
+import { ClickOutsideDirective } from './click-outside.directive';
+import { CropComponent } from './crop/crop.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     SortProductComponent,
+    ClickOutsideDirective,
+    CropComponent,
     
     
    

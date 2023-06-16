@@ -1,28 +1,22 @@
-<div class="main">
-<div class="container">
-    <div>
-    <h4 class="h4" (click)="toggleDropdown('rush')">Rush
+<div id="parentDiv" (scroll)="onParentDivScroll()">
+<div class="container"  *ngIf="loadingData">
+    <div (clickOutside)="clickedOutside('rush')" *ngIf="isLoading">
+    <h4 class="h4" (click)="toggleDropdown('rush')" >Rush
       <i [ngClass]="{'fa-chevron-up': isRush, 'fa-chevron-down': !isRush}" class="fas"></i>
     </h4>
     
-    <div class="dropdown-list" *ngIf="isRush" >
-     
-      
-        <select >
-            <option value="All">ALl</option>
-            <option value="Yes">yes</option>
-            <option value="No">No</option>
-           
-          </select>
-           
+    <div class="dropdown-list" *ngIf="isRush">
+      <p class="c-pointer change-color" (change)="getValues($event); handleChange($event)" (click)="load()">All</p>
+        <p class="c-pointer" (change)="getValues($event); handleChange($event)" (click)="load()">yes</p>
+        <p class="c-pointer" (change)="getValues($event); handleChange($event)" (click)="load()">No</p>
     </div>
 </div>
   <span>space </span>
 
 
 
-  <div>
-  <h4 class="h4" (click)="toggleDropdown('storage')">Storage
+  <div (clickOutside)="clickedOutside('storage')" >
+  <h4 class="h4" (click)="toggleDropdown('storage')" >Storage
     <i [ngClass]="{'fa-chevron-up': isStorage, 'fa-chevron-down': !isStorage}" class="fas"></i>
   </h4>
   
@@ -51,12 +45,12 @@
 <span>space </span>
 
 <hr>
-<div>
-  <h4 class="h4" (click)="toggleDropdown('service')">Service
+<div (clickOutside)="clickedOutside('service')">
+  <h4 class="h4" (click)="toggleDropdown('service')" >Service
     <i [ngClass]="{'fa-chevron-up': isService, 'fa-chevron-down': !isService}" class="fas"></i>
   </h4>
   
-  <div class="dropdown-list" *ngIf="isService">
+  <div class="dropdown-list dropdown" *ngIf="isService">
    
     
     <label class="dropdown-option">
@@ -93,12 +87,12 @@
 </div>
 <span>space </span>
 
-<div>
-    <h4 class="h4" (click)="toggleDropdown('status')">Status 
+<div (clickOutside)="clickedOutside('status')">
+    <h4 class="h4" (click)="toggleDropdown('status')" >Status 
       <i [ngClass]="{'fa-chevron-up': isStatus, 'fa-chevron-down': !isStatus}" class="fas"></i>
     </h4>
     
-    <div class="dropdown-list" *ngIf="isStatus" [class.show]="isStatus">
+    <div class="dropdown-list" *ngIf="isStatus">
      
       
       <label class="dropdown-option">
@@ -130,29 +124,29 @@
 </div>
 
 
- <div class="card-container">
+ 
 
+
+<div class="card-container">
   <div class="card" *ngFor="let item of filteredData">
-   
-    <ng-container *ngIf="'plano'; then planoImage else pharmaImage"></ng-container>
+    <!-- <ng-container *ngIf="item?.Ticket?.PharmaProductImages?.length > 0; then productImage else defaultImage"></ng-container> -->
+    <ng-container *ngIf="item?.Ticket?.PharmaProductImages?.length > 0">
+      <!-- {{item | json}} -->
+      <img [src]="item?.Ticket?.PharmaProductImages?.[0]?.baseImageData?.imageURL" alt="Product Image"  class="image">
+    </ng-container>
+    
+    <ng-container *ngIf="item?.Ticket?.PharmaProductImages?.length === 0">
+      <img src="assets/pharma.jpeg" alt="Default Image" class="card-image">
+    </ng-container>
     <div class="card-details">
-      <!-- <p>{{ item.PharmaProductImages}}</p> -->
       <h3>{{ item.companyName }}</h3>
       <p style="color: blue;">UPC Code: {{ item.upc }}</p>
       <p>{{ item.name }}</p>
       <p>PSR: {{ item.psrId }}</p>
       <p>{{ item.serviceType }}</p>
-     
-      <!-- Additional details as needed -->
+      
     </div>
   </div>
 </div>
 
-</div>
-<ng-template #planoImage>
-  <img src="assets/plano.png" alt="Plano Image" class="card-image">
-</ng-template>
 
-<ng-template #pharmaImage>
-  <img src="assets/pharma.jpeg" alt="Pharma Image" class="card-image">
-</ng-template>
