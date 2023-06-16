@@ -18,15 +18,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     AuthenticationRoutingModule,
     FormsModule,
-<<<<<<< HEAD
     MatInputModule,
     MatFormFieldModule,
     SharedModule
     
-=======
-    // DatePipe,
-    // SignUpDatePipe
->>>>>>> 57f9f5e40435b88baf41bc156b6d4af3fd5c9fc6
   ]
 })
 export class AuthenticationModule { }

@@ -13,7 +13,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from './shared/shared.module';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { IonicModule } from '@ionic/angular';
 import { MatInputModule } from '@angular/material/input';
@@ -32,15 +31,6 @@ import { CropComponent } from './crop/crop.component';
     CropComponent,
     
     
-=======
-
-// import { DatePipe } from '@angular/common';
-
-
-@NgModule({
-  declarations: [
-    AppComponent,
->>>>>>> 57f9f5e40435b88baf41bc156b6d4af3fd5c9fc6
    
   ],
   imports: [
