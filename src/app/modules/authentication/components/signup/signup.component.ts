@@ -29,6 +29,8 @@ export class SignupComponent implements OnInit{
     this.user.id = this.usersData.length+1;
     this.user.time = new Date().toString();
     this.usersData.push(this.user);
+    console.log("time to ",this.user);
+    
     localStorage.setItem('users',JSON.stringify(this.usersData) );
     alert("User created successfully");
     this.router.navigate(['']);

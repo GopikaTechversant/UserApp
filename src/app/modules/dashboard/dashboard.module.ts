@@ -18,8 +18,12 @@ import { HighlightDirective } from 'src/app/directives/highlight.directive';
     UserlistComponent,
     EditComponent,
     DeleteComponent,
+<<<<<<< HEAD
     SignUpDatePipe,
     HighlightDirective
+=======
+    SignUpDatePipe
+>>>>>>> 57f9f5e40435b88baf41bc156b6d4af3fd5c9fc6
   ],
   imports: [
     CommonModule,
@@ -30,11 +34,17 @@ import { HighlightDirective } from 'src/app/directives/highlight.directive';
     MatInputModule,
     MatIconModule,
     SharedModule,
+<<<<<<< HEAD
     ReactiveFormsModule
   ],
   exports: [
     UserlistComponent,
     HighlightDirective
+=======
+    ReactiveFormsModule,
+    // DatePipe,
+    
+>>>>>>> 57f9f5e40435b88baf41bc156b6d4af3fd5c9fc6
   ]
 })
 export class DashboardModule { }

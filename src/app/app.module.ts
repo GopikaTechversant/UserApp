@@ -9,10 +9,11 @@ import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
+// import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from './shared/shared.module';
 import { FormControl } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { IonicModule } from '@ionic/angular';
 import { MatInputModule } from '@angular/material/input';
@@ -31,6 +32,15 @@ import { CropComponent } from './crop/crop.component';
     CropComponent,
     
     
+=======
+
+// import { DatePipe } from '@angular/common';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+>>>>>>> 57f9f5e40435b88baf41bc156b6d4af3fd5c9fc6
    
   ],
   imports: [
@@ -43,7 +53,7 @@ import { CropComponent } from './crop/crop.component';
     BrowserAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatIconModule,
+    // MatIconModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
